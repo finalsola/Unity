@@ -1,3 +1,6 @@
 Transform LoadingBackground;
 LoadingBackground = transform.Find("LoadingScene");
+//Find()方法只能直接去找子节点，如果你想找 孙节点，那么可以用”/“符号把层级关系隔开，找起来很方便。
+//同样无论”xxxx”对象是否active = true 都是可以直接找到对象的。
+//但是Transform.Find()必须要保证你的顶级父对象的activity = true。
 //如果用Gameobject.Find()会找不到未激活的游戏对象
