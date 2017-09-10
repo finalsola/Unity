@@ -1,0 +1,3 @@
+Transform LoadingBackground;
+LoadingBackground = transform.Find("LoadingScene");
+//如果用Gameobject.Find()会找不到未激活的游戏对象
