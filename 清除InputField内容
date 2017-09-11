@@ -1,0 +1,2 @@
+//清除InputField（gameobject）的内容，不能通过它的子物体Text.text=""来清除
+//需要通过(scrpit)InputField.text=""来清除
