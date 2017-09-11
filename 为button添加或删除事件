@@ -1,0 +1,2 @@
+Button.onClick.AddListener();//添加
+Button.onClick.RemoveListener();//删除
