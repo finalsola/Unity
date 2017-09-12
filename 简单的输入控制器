@@ -1,0 +1,29 @@
+public class InputManager
+{
+  //单例化，过程省略
+  public bool PlayMove(out float h,out float v)
+  {
+    h=Input.GetAxis("Horizontal");
+    v=Input.GetAxis("Vertical");
+    retrun （h!=0||v!=0)&&!ResourcesManager._instance.inputField.isFocus;//判断一个输入框是否被选定
+  }
+}
+
+
+//在另一个脚本中
+delegate bool d(out float h, out float v);
+float h,v;
+public class PlayerController:MonoBehavior
+{
+  delegate bool InputMoveControl(out float h, out float v);
+  void Start()
+  {
+    InputMoveControl+=InputManager._instance.PlayMove;
+  }
+  void Update()
+  {
+    if(InputMoveControl(out h,out v))
+    transform.position+=new Vector3(h,0,v)*Time.deltaTime*speed;
+  }
+  
+}
