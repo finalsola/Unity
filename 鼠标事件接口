@@ -1,0 +1,6 @@
+//用于Canvas上的物体
+using UnityEngin.EventSystems;//使用该命名空间后，可以使用事件接口
+//接口名一般为I……Handler
+IbeginDragHandler//开始拖动
+IEndDragHandler//结束拖动
+IDragHandler//拖动中
