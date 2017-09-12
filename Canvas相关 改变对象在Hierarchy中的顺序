@@ -1,0 +1,4 @@
+int count = parentTransform.childCount;//获取父对象下子对象的个数
+childtransform.SetSiblingIndex(count-1);//设置子对象的位置为count-1，即倒数第二位
+childtransform.SetAsLastSibling();//设置子对象的位置为最后一位
+childtransform.SetAsFirstSibling();//设置子对象的位置为第一位
