@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEditor;
+using UnityEditor.UI;
+[CustomEditor(typeof(test))]
+public class TestInspector : ScrollRectEditor
+{
+    SerializedProperty aa;
+    protected override void OnEnable() {
+        base.OnEnable();
+        aa = serializedObject.FindProperty("text_num");
+    }
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        EditorGUILayout.PropertyField(aa);
+        
+    }
+}
